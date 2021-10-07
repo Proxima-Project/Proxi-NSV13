@@ -663,7 +663,7 @@
 
 
 	if(mind)
-		if((mind.assigned_role == "Engineer") || (mind.assigned_role == "Chief Engineer") )
+		if((mind.assigned_role == "Engineer") || (mind.assigned_role == "Chief Engineer") ) //RuNsv13 Station Engineer -> engineer
 			gain = 100
 		if(mind.assigned_role == "Clown")
 			gain = rand(-1000, 1000)

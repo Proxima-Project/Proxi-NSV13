@@ -22,7 +22,7 @@
 /datum/gear/hat/hhat_blue
 	display_name = "hardhat, blue"
 	path = /obj/item/clothing/head/hardhat/dblue
-	allowed_roles = list("Chief Engineer", "Engineer", "Atmospheric Technician")
+	allowed_roles = list("Chief Engineer", "Engineer", "Atmospheric Technician") //RuNsv13 Station Engineer -> engineer
 	cost = 2500
 
 //CIVILIAN HATS & MISC

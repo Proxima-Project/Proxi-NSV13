@@ -1929,7 +1929,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "A pair of extra-strength magboots that crush anyone you walk over."
 	cost = 7
 	item = /obj/item/clothing/shoes/magboots/crushing
-	restricted_roles = list("Chief Engineer", "Engineer", "Atmospheric Technician")
+	restricted_roles = list("Chief Engineer", "Engineer", "Atmospheric Technician") //RuNsv13 Station Engineer -> engineer
 
 /datum/uplink_item/role_restricted/gorillacubes
 	name = "Box of Gorilla Cubes"
@@ -2230,8 +2230,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "A plasma cored control rod designed for sabotaging Stormdrive reactors."
 	cost = 10
 	item = /obj/item/control_rod/plasma
-	restricted_roles = list("Chief Engineer", "Engineer", "Atmospheric Technician")
-
+	restricted_roles = list("Chief Engineer", "Engineer", "Atmospheric Technician") //RuNsv13 Station Engineer -> engineer
 // Pointless
 /datum/uplink_item/badass
 	category = "(Pointless) Badassery"

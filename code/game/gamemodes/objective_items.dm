@@ -170,7 +170,7 @@
 	name = "the blackbox."
 	targetitem = /obj/item/blackbox
 	difficulty = 10
-	excludefromjob = list("Chief Engineer","Engineer","Atmospheric Technician")
+	excludefromjob = list("Chief Engineer","Engineer","Atmospheric Technician") //RuNsv13 Station Engineer -> engineer
 
 //Unique Objectives
 /datum/objective_item/unique/docs_red

@@ -57,7 +57,7 @@
 /datum/gear/suit/wintercoat/engineering
 	display_name = "engineering winter coat"
 	path = /obj/item/clothing/suit/hooded/wintercoat/engineering
-	allowed_roles = list("Chief Engineer", "Engineer", "Atmospheric Technician")
+	allowed_roles = list("Chief Engineer", " Engineer", "Atmospheric Technician") //RuNsv13 Station Engineer -> engineer
 
 /datum/gear/suit/wintercoat/hydro
 	display_name = "hydroponics winter coat"
