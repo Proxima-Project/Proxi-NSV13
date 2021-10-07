@@ -27,7 +27,7 @@ Lawyer=CIV
 
 Chaplain=SLT
 
-Station Engineer=SLT
+Engineer=SLT
 Atmospheric Technician=SPC
 
 Medical Doctor=SLT

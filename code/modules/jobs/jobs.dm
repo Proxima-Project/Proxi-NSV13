@@ -12,7 +12,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 
 GLOBAL_LIST_INIT(engineering_positions, list(
 	"Chief Engineer",
-	"Station Engineer",
+	"Engineer",
 	"Atmospheric Technician"))
 
 
@@ -147,7 +147,7 @@ GLOBAL_PROTECT(exp_specialmap)
 	job = ce_expand.Replace(job, "chief engineer")
 	job = qm_expand.Replace(job, "quartermaster")
 	job = sec_expand.Replace(job, "security officer")
-	job = engi_expand.Replace(job, "station engineer")
+	job = engi_expand.Replace(job, "engineer") //RuNsv13 Station Engineer -> engineer
 	job = atmos_expand.Replace(job, "atmospheric technician")
 	job = doc_expand.Replace(job, "medical doctor")
 	job = mine_expand.Replace(job, "shaft miner")

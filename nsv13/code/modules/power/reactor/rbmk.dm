@@ -242,7 +242,7 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 		next_slowprocess = world.time + 1 SECONDS //Set to wait for another second before processing again, we don't need to process more than once a second
 
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/proc/has_fuel()
-	return fuel_rods?.len
+	return length(fuel_rods)
 
 /obj/machinery/atmospherics/components/trinary/nuclear_reactor/proc/slowprocess()
 	//Let's get our gasses sorted out.
@@ -483,7 +483,8 @@ The reactor CHEWS through moderator. It does not do this slowly. Be very careful
 	for(var/client/C in GLOB.clients)
 		if(CONFIG_GET(flag/allow_crew_objectives))
 			var/mob/M = C.mob
-			if(M?.mind?.current && LAZYLEN(M.mind.crew_objectives) && (M.job == "Station Engineer" || M.job == "Chief Engineer" || M.job == "Atmospheric Technician"))
+			if(M?.mind?.current && LAZYLEN(M.mind.crew_objectives) && (M.job == "Engineer" || M.job == "Chief Engineer" || M.job == "Atmospheric Technician"))
+																		//RuNsv13 Station Engineer -> engineer
 				for(var/datum/objective/crew/meltdown/MO in M.mind.crew_objectives)
 					MO.meltdown = TRUE
 

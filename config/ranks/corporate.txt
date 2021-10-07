@@ -27,7 +27,7 @@ Lawyer=WS
 
 Chaplain=WS
 
-Station Engineer=WS
+Engineer=WS
 Atmospheric Technician=WS
 
 Medical Doctor=WS

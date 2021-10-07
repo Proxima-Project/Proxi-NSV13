@@ -27,7 +27,7 @@ Lawyer=CRW
 
 Chaplain=CRW
 
-Station Engineer=LCPL
+Engineer=LCPL
 Atmospheric Technician=LCPL
 
 Medical Doctor=CPL

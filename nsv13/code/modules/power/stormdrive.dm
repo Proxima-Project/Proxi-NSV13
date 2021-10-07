@@ -361,7 +361,7 @@ Control Rods
 							control_rod_installation = FALSE
 							return
 						control_rod_installation = FALSE
-						if ( state == REACTOR_STATE_IDLE ) // Need to recheck the maintenance mode in case someone switched it while pulling out rods 
+						if ( state == REACTOR_STATE_IDLE ) // Need to recheck the maintenance mode in case someone switched it while pulling out rods
 							to_chat(usr, "<span class='warning'>[src] is not in maintenance mode! Enagage maintenance safety protocols before opening the lid!</span>")
 							return FALSE
 						to_chat(usr, "<span class='notice'>You remove the control rod from the [src].</span>")
@@ -1130,7 +1130,8 @@ Control Rods
 		if(C)
 			if(CONFIG_GET(flag/allow_crew_objectives))
 				var/mob/M = C.mob
-				if(M?.mind?.current && LAZYLEN(M.mind.crew_objectives) && (M.job == "Station Engineer" || M.job == "Chief Engineer" || M.job == "Atmospheric Technician"))
+				if(M?.mind?.current && LAZYLEN(M.mind.crew_objectives) && (M.job == "Engineer" || M.job == "Chief Engineer" || M.job == "Atmospheric Technician"))
+																			//RuNsv13 Station Engineer -> engineer
 					for(var/datum/objective/crew/meltdown/MO in M.mind.crew_objectives)
 						MO.meltdown = TRUE
 
