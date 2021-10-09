@@ -460,6 +460,15 @@
 /obj/structure/hull_plate,
 /turf/open/floor/plating/airless,
 /area/nostromo/hangar/starboard)
+"bI" = (
+/obj/machinery/stasis,
+/obj/effect/turf_decal/tile/green{
+	dir = 8;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/green,
+/turf/open/floor/monotile/steel,
+/area/nostromo/medbay)
 "bJ" = (
 /obj/effect/turf_decal/arrows{
 	dir = 4;
@@ -1739,14 +1748,26 @@
 /turf/open/floor/plasteel/ridged/steel,
 /area/nostromo/engineering)
 "fk" = (
-/obj/effect/turf_decal/tile/green,
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/auto_name/north{
 	pixel_y = 24
 	},
-/turf/open/floor/plasteel/techmaint,
+/obj/structure/closet/crate/freezer/blood,
+/obj/effect/turf_decal/tile/green{
+	dir = 4;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 8;
+	icon_state = "tile_corner"
+	},
+/turf/open/floor/monotile/steel,
 /area/nostromo/medbay)
 "fl" = (
 /obj/structure/cable{
@@ -1973,16 +1994,20 @@
 /area/nostromo/engineering)
 "fH" = (
 /obj/structure/table/reinforced,
-/obj/effect/turf_decal/tile/green{
-	dir = 8;
-	icon_state = "tile_corner"
-	},
-/obj/effect/turf_decal/tile/green,
 /obj/item/paper{
 	info = "Place patient into stasis bed and attempt to apply first aid. Seek immediate professional medical help and ensure that the stasis unit remains active. Remain calm, do not attempt complex procedures by yourselves.";
 	name = "Dublanc Mining Corporation Medical  Procedures"
 	},
-/turf/open/floor/plasteel/techmaint,
+/obj/effect/turf_decal/tile/green{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 4;
+	icon_state = "tile_corner"
+	},
+/obj/item/storage/firstaid/toxin,
+/turf/open/floor/monotile/steel,
 /area/nostromo/medbay)
 "fI" = (
 /obj/structure/fluff/support_beam,
@@ -2129,52 +2154,66 @@
 /area/maintenance/nsv/mining_ship/central)
 "gb" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/firstaid/regular,
-/obj/effect/turf_decal/tile/green{
-	dir = 8;
-	icon_state = "tile_corner"
-	},
-/obj/effect/turf_decal/tile/green,
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plasteel/techmaint,
-/area/nostromo/medbay)
-"gc" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/firstaid/o2,
 /obj/effect/turf_decal/tile/green{
-	dir = 8;
+	dir = 1;
 	icon_state = "tile_corner"
 	},
-/obj/effect/turf_decal/tile/green,
-/turf/open/floor/plasteel/techmaint,
-/area/nostromo/medbay)
-"gd" = (
-/obj/effect/turf_decal/tile/green{
-	dir = 8;
-	icon_state = "tile_corner"
-	},
-/obj/machinery/iv_drip,
-/obj/machinery/airalarm/directional/north{
-	req_access = null;
-	req_one_access_txt = "48"
-	},
-/turf/open/floor/plasteel/techmaint,
-/area/nostromo/medbay)
-"ge" = (
-/obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
 	dir = 4;
 	icon_state = "tile_corner"
 	},
+/obj/item/storage/box/hug/medical,
+/obj/item/storage/firstaid/fire,
+/turf/open/floor/monotile/steel,
+/area/nostromo/medbay)
+"gc" = (
+/obj/item/storage/firstaid/o2,
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/tile/green{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 4;
+	icon_state = "tile_corner"
+	},
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/brute,
+/turf/open/floor/monotile/steel,
+/area/nostromo/medbay)
+"gd" = (
+/obj/machinery/airalarm/directional/north{
+	req_access = null;
+	req_one_access_txt = "48"
+	},
+/obj/machinery/sleeper,
+/obj/effect/turf_decal/tile/green{
+	dir = 4;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/turf/open/floor/monotile/steel,
+/area/nostromo/medbay)
+"ge" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel/techmaint,
-/area/nostromo/medbay)
-"gf" = (
-/turf/open/floor/monotile/light,
+/obj/effect/turf_decal/tile/green{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 8;
+	icon_state = "tile_corner"
+	},
+/turf/open/floor/monotile/steel,
 /area/nostromo/medbay)
 "gg" = (
 /obj/machinery/atmospherics/pipe/manifold/green/hidden{
@@ -2182,9 +2221,6 @@
 	},
 /turf/open/floor/plasteel/ridged/steel,
 /area/nostromo/engineering/atmospherics)
-"gh" = (
-/turf/open/floor/monotile,
-/area/nostromo/medbay)
 "gi" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2199,14 +2235,11 @@
 /area/nostromo/engineering)
 "gj" = (
 /obj/effect/turf_decal/tile/green{
-	dir = 8;
+	dir = 4;
 	icon_state = "tile_corner"
 	},
-/obj/effect/turf_decal/tile/green{
-	dir = 1;
-	icon_state = "tile_corner"
-	},
-/turf/open/floor/plasteel/techmaint,
+/obj/effect/turf_decal/tile/green,
+/turf/open/floor/monotile/steel,
 /area/nostromo/medbay)
 "gk" = (
 /obj/machinery/door/airlock/ship/engineering/glass{
@@ -2240,26 +2273,21 @@
 /turf/open/floor/plasteel/ship/padded,
 /area/nostromo/medbay)
 "gm" = (
-/obj/effect/turf_decal/tile/green,
-/obj/effect/turf_decal/tile/green{
-	dir = 4;
-	icon_state = "tile_corner"
-	},
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/open/floor/plasteel/techmaint,
-/area/nostromo/medbay)
-"gn" = (
-/obj/machinery/stasis,
-/turf/open/floor/plasteel/grid/steel,
+/obj/effect/turf_decal/tile/green{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 8;
+	icon_state = "tile_corner"
+	},
+/turf/open/floor/monotile/steel,
 /area/nostromo/medbay)
 "go" = (
-/obj/machinery/computer/operating{
-	dir = 4;
-	icon_state = "computer"
-	},
-/turf/open/floor/monotile,
+/turf/open/floor/plasteel/techmaint,
 /area/nostromo/medbay)
 "gp" = (
 /obj/structure/hull_plate/end,
@@ -2436,12 +2464,15 @@
 /turf/open/floor/plasteel/techmaint,
 /area/nostromo)
 "gN" = (
-/obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
-	dir = 4;
+	dir = 8;
 	icon_state = "tile_corner"
 	},
-/turf/open/floor/plasteel/techmaint,
+/obj/effect/turf_decal/tile/green{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/turf/open/floor/monotile/steel,
 /area/nostromo/medbay)
 "gO" = (
 /obj/structure/chair/comfy/shuttle{
@@ -3143,11 +3174,17 @@
 /turf/open/floor/plating,
 /area/nostromo/engineering/atmospherics)
 "ij" = (
+/obj/machinery/stasis,
 /obj/effect/turf_decal/tile/green{
-	dir = 4;
+	dir = 8;
 	icon_state = "tile_corner"
 	},
-/turf/open/floor/plasteel/techmaint,
+/obj/effect/turf_decal/tile/green{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/green,
+/turf/open/floor/monotile/steel,
 /area/nostromo/medbay)
 "ik" = (
 /obj/machinery/atmospherics/components/unary/portables_connector{
@@ -3826,34 +3863,40 @@
 /turf/open/floor/plasteel/ridged/steel,
 /area/nostromo/engineering)
 "jZ" = (
+/obj/machinery/computer/operating{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
-	dir = 4;
+	dir = 8;
 	icon_state = "tile_corner"
 	},
-/obj/effect/turf_decal/tile/green{
-	dir = 1;
-	icon_state = "tile_corner"
-	},
-/turf/open/floor/plasteel/techmaint,
+/turf/open/floor/monotile/steel,
 /area/nostromo/medbay)
 "ka" = (
+/obj/machinery/light,
+/obj/machinery/iv_drip,
+/obj/effect/turf_decal/tile/green{
+	dir = 8;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/green,
+/turf/open/floor/monotile/steel,
+/area/nostromo/medbay)
+"kb" = (
+/obj/machinery/computer/operating{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 8;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
 	dir = 4;
 	icon_state = "tile_corner"
 	},
-/obj/effect/turf_decal/tile/green{
-	dir = 1;
-	icon_state = "tile_corner"
-	},
-/obj/machinery/light,
-/turf/open/floor/plasteel/techmaint,
-/area/nostromo/medbay)
-"kb" = (
-/obj/effect/turf_decal/tile/green{
-	dir = 1;
-	icon_state = "tile_corner"
-	},
-/turf/open/floor/plasteel/techmaint,
+/turf/open/floor/monotile/steel,
 /area/nostromo/medbay)
 "kc" = (
 /obj/machinery/door/airlock/ship/hatch{
@@ -5611,20 +5654,17 @@
 /turf/closed/wall/ship,
 /area/nostromo/hangar/starboard)
 "UY" = (
-/obj/effect/turf_decal/tile/green{
-	dir = 8;
-	icon_state = "tile_corner"
-	},
-/obj/effect/turf_decal/tile/green{
-	dir = 1;
-	icon_state = "tile_corner"
-	},
 /obj/machinery/camera{
 	c_tag = "Intensive Care Unit";
 	dir = 8;
 	network = list("mine")
 	},
-/turf/open/floor/plasteel/techmaint,
+/obj/effect/turf_decal/tile/green{
+	dir = 4;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/green,
+/turf/open/floor/monotile/steel,
 /area/nostromo/medbay)
 "VB" = (
 /obj/machinery/camera{
@@ -23056,9 +23096,9 @@ Wp
 rW
 fi
 fH
-gf
-gh
-gf
+go
+go
+go
 jZ
 dK
 fm
@@ -23313,9 +23353,9 @@ Cc
 ef
 fi
 gb
-gh
-gn
-gh
+go
+go
+go
 ka
 dK
 fo
@@ -23570,10 +23610,10 @@ db
 ee
 fi
 gc
-gf
 go
-gf
-jZ
+go
+go
+bI
 dK
 fw
 fC
