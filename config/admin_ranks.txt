@@ -98,3 +98,23 @@ Name = CouncilMember
 Include = EVERYTHING
 Exclude =
 Edit = EVERYTHING
+
+Name = Head Administrator
+Include = EVERYTHING
+Exclude =
+Edit = EVERYTHING
+
+Name = Administrator
+Include = @ STEALTH SOUND DEBUG VAREDIT SERVER SPAWN POLL
+Exclude =
+Edit =
+
+Name = Moderator
+Include = @ SPAWN VAREDIT BAN
+Exclude =
+Edit =
+
+Name = Helper
+Include = EVERYTHING
+Exclude =
+Edit =
