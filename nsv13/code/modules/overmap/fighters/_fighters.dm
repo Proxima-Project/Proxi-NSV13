@@ -414,7 +414,7 @@ Been a mess since 2018, we'll fix it someday (probably)
 	max_angular_acceleration = 210
 	speed_limit = 10
 	pixel_w = -16
-	pixel_z = -24
+	pixel_z = -20
 	components = list(/obj/item/fighter_component/fuel_tank/tier3,
 						/obj/item/fighter_component/avionics,
 						/obj/item/fighter_component/apu/tier3,
