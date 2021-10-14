@@ -9,7 +9,7 @@ Warden=LT
 
 Bridge Staff=LTJG
 
-Midshipman=ENS
+Midshipman=CR
 
 Quartermaster=PO3
 Cargo Technician=CR
