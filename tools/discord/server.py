@@ -12,7 +12,7 @@ It needs to be filled out correctly to work, duh
 Also this was made by CthulhuOnIce
 """
 
-valid = "<>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~:/?#[]@!$&'()*+,;= "
+valid = "<>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя0123456789-._~:/?#[]@!$&'()*+,;= "
 
 def HTMLEntitiesToUnicode(text):
    return html.unescape(text)
@@ -47,6 +47,7 @@ ip_whitelist = c["ip-whitelist"]
 
 ooc_webhook = c["ooc-webhook"]
 ahelp_webhook = c["ahelp-webhook"]
+roundslap_webhook = c["roundslap-webhook"]
 
 app = Flask(__name__)
 
@@ -59,6 +60,8 @@ def hello():
 def trigger(channel, message):
     global ip_whitelist
     global ooc_webhook
+    global roundslap_webhook
+    
     if(request.remote_addr not in ip_whitelist):
         return "<h1>Access Denied.</h1>"
     message = url2msg(message)
@@ -70,6 +73,9 @@ def trigger(channel, message):
         return message
     elif channel == "ahelp":
         requests.post(ahelp_webhook, data=data)
+        return message
+    elif channel == "roundslap":
+        requests.post(roundslap_webhook, data=data)
         return message
     else:
         return "<h1>Channel not found</h1>"
