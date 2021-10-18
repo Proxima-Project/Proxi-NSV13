@@ -8,6 +8,7 @@ Galactica
 Ishimura
 Syria Planum
 Recurve
+Raven
 Feliciana
 Vishari
 Prometheus
@@ -34,6 +35,8 @@ Kobol
 Thor
 Loki
 Heimdal
+Huginn
+Muninn
 Jotunheimr
 Tormund
 Astrid
@@ -41,6 +44,7 @@ Corvus
 Corpi
 Asgard
 Aquila
+Baneblade
 Dionysias
 Deonida
 Cartesia

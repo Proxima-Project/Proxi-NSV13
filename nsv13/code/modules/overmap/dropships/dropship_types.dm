@@ -30,7 +30,7 @@ Credit to TGMC for the interior sprites for all these!
 	max_angular_acceleration = 10
 	speed_limit = 4
 	resize_factor = 2
-//	ftl_goal = 45 SECONDS //sabres can, by default, initiate relative FTL jumps to other ships.
+	var/ftl_goal = 45 SECONDS //sabres can, by default, initiate relative FTL jumps to other ships.
 	loadout_type = /datum/component/ship_loadout/utility
 	dradis_type = null //Sabres can send sonar pulses
 	components = list(/obj/item/fighter_component/fuel_tank/tier2,
@@ -181,3 +181,27 @@ Credit to TGMC for the interior sprites for all these!
 /datum/map_template/dropship/sabre/syndicate
     name = "SU-437 Sabre Interior (Syndicate)"
     mappath = "_maps/templates/boarding/sabre_interior_syndicate.dmm"
+
+/obj/structure/overmap/fighter/dropship/sabre/falcon
+	name = "Su-524D Falcon Gunship"
+	desc = "A heavily armoured gunship with transport capabilities. Designed for boarding squads fire support and harassment of large vessels. Cramped but sturdy."
+	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 40, "bomb" = 40, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 80, "overmap_light" = 20, "overmap_medium" = 10, "overmap_heavy" = 90)
+	sprite_size = 32
+	forward_maxthrust = 6.5
+	backward_maxthrust = 6.5
+	side_maxthrust = 6
+	max_angular_acceleration = 120
+	speed_limit = 7.5
+	components = list(/obj/item/fighter_component/fuel_tank/tier2,
+						/obj/item/fighter_component/avionics,
+						/obj/item/fighter_component/apu/tier2,
+						/obj/item/fighter_component/armour_plating/tier3/gunship,
+						/obj/item/fighter_component/targeting_sensor,
+						/obj/item/fighter_component/engine,
+						/obj/item/fighter_component/canopy/reinforced/gunship,
+						/obj/item/fighter_component/docking_computer,
+						/obj/item/fighter_component/battery/tier2,
+						/obj/item/fighter_component/ftl,
+						/obj/item/fighter_component/primary/cannon/gunship,
+						/obj/item/fighter_component/secondary/ordnance_launcher/tier2/gunship,
+						/obj/item/fighter_component/countermeasure_dispenser/gunship)
