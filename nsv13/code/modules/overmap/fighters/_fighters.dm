@@ -372,7 +372,7 @@ Been a mess since 2018, we'll fix it someday (probably)
 
 /obj/structure/overmap/fighter/heavy
 	name = "Su-410 Scimitar"
-	desc = "An Su-410 Scimitar heavy attack craft. It's a lot beefier than its Rapier cousin and is designed to take out capital ships, due to the weight of its modules however, it is extremely slow."
+	desc = "An Su-410 Scimitar heavy attack craft. It's a lot beefier than its Rapier cousin and is designed to take out capital ships, also being much slower due to the weight of its modules."
 	icon = 'nsv13/icons/overmap/nanotrasen/heavy_fighter.dmi'
 	icon_state = "heavy_fighter"
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 50, "bomb" = 50, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 80, "overmap_light" = 25, "overmap_medium" = 20, "overmap_heavy" = 90)
@@ -496,7 +496,7 @@ Been a mess since 2018, we'll fix it someday (probably)
 
 /obj/structure/overmap/fighter/interceptor/hawkins
 	name = "X-047 Manticore"
-	desc = "An X-047 Manticore two-seated space interceptor craft. Designed personally for NT ace on the Rapier base, outfitted by top-tier components. Manticore has been upgraded with reinforced airframe and enhanced engine for intense combat. As you look closer, you can see the name Tina Ridgewell engraved on it's hull."
+	desc = "An X-047 Manticore two-seated space interceptor craft. Designed personally by NanoTrasen ace pilot Damien Hawkins on the Rapier base with usage of stolen Syndicate data, outfitted by top-tier components. Manticore has been upgraded with reinforced airframe and enhanced engine for intense combat. As you look closer, you can see the name Tina Ridgewell engraved on it's hull."
 	components = list(/obj/item/fighter_component/fuel_tank/tier3,
 						/obj/item/fighter_component/avionics,
 						/obj/item/fighter_component/apu/tier3,
@@ -584,7 +584,7 @@ Been a mess since 2018, we'll fix it someday (probably)
 /obj/structure/overmap/fighter/interceptor/wyvern
 	req_one_access = ACCESS_SYNDICATE
 	icon = 'nsv13/icons/overmap/syndicate/syn_wyvern.dmi'
-	icon_state = "fighter"
+	icon_state = "pixy"
 	components = list(/obj/item/fighter_component/fuel_tank/tier3,
 						/obj/item/fighter_component/avionics,
 						/obj/item/fighter_component/apu/tier3,
@@ -1735,6 +1735,13 @@ Utility modules can be either one of these types, just ensure you set its slot t
 	accepted_ammo = /obj/item/ship_weapon/ammunition/torpedo
 	max_ammo = 2
 	weight = 1
+
+/obj/item/fighter_component/secondary/ordnance_launcher/torpedo/single
+	name = "Jury-rigged Nuke Pylon"
+	desc = "Crude torpedo pylon made from scrap and attached to Sabre via duct tape to cosplay the Independency Day."
+	slot = HARDPOINT_SLOT_UTILITY_SECONDARY
+	accepted_ammo = /obj/item/ship_weapon/ammunition/torpedo/nuke
+	max_ammo = 1
 
 /obj/item/fighter_component/secondary/ordnance_launcher/torpedo/tier2
 	name = "Dora Enhanced Bomb Launcher"
