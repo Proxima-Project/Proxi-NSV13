@@ -243,7 +243,7 @@ Been a mess since 2018, we'll fix it someday (probably)
 				return
 			var/obj/item/fighter_component/engine/engine = loadout.get_slot(HARDPOINT_SLOT_ENGINE)
 			if(!engine)
-				to_chat(usr, "<span class='warning'>You can't send fuel to an APU that isn't installed.</span>")
+				to_chat(usr, "<span class='warning'>You can't send fuel to an engine that isn't installed.</span>")
 			APU.toggle_fuel_line()
 			playsound(src, 'nsv13/sound/effects/fighters/warmup.ogg', 100, FALSE)
 		if("battery")
@@ -402,7 +402,7 @@ Been a mess since 2018, we'll fix it someday (probably)
 
 /obj/structure/overmap/fighter/interceptor
 	name = "X-047 Manticore"
-	desc = "An X-047 Manticore two-seated space interceptor craft. Designed personally for NT ace on the Rapier base, outfitted by top-tier components. Manticore has been upgraded with reinforced struts and internal electromagnetic launcher for long-ranged engagement. As you look closer, you can see the name Tina Ridgewell engraved on it's hull."
+	desc = "An X-047 Manticore two-seated space interceptor craft. Designed personally for NT ace on the Rapier base, outfitted by top-tier components. Manticore has been upgraded with reinforced struts and enhanced engine for intense combat."
 	icon = 'nsv13/icons/overmap/syndicate/syn_wyvern.dmi'
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 50, "bomb" = 50, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 80, "overmap_light" = 35, "overmap medium" = 40, "overmap_heavy" = 120)
 	sprite_size = 32
@@ -422,7 +422,7 @@ Been a mess since 2018, we'll fix it someday (probably)
 						/obj/item/fighter_component/targeting_sensor,
 						/obj/item/fighter_component/engine/tier2,
 						/obj/item/fighter_component/countermeasure_dispenser,
-						/obj/item/fighter_component/secondary/ordnance_launcher/eml,
+						/obj/item/fighter_component/secondary/ordnance_launcher/tier2,
 						/obj/item/fighter_component/oxygenator/tier3,
 						/obj/item/fighter_component/canopy/tier3,
 						/obj/item/fighter_component/docking_computer,
@@ -440,32 +440,44 @@ Been a mess since 2018, we'll fix it someday (probably)
 						/obj/item/fighter_component/targeting_sensor,
 						/obj/item/fighter_component/engine/tier2,
 						/obj/item/fighter_component/countermeasure_dispenser,
-						/obj/item/fighter_component/secondary/ordnance_launcher/eml,
+						/obj/item/fighter_component/secondary/ordnance_launcher/tier2,
 						/obj/item/fighter_component/oxygenator/tier3,
 						/obj/item/fighter_component/canopy/tier3,
 						/obj/item/fighter_component/docking_computer,
 						/obj/item/fighter_component/battery/tier3,
 						/obj/item/fighter_component/primary/cannon/heavy)
 
-//Syndie counterparts.
-/obj/structure/overmap/fighter/light/syndicate //PVP MODE
-	name = "Syndicate Light Fighter"
-	desc = "The Syndicate's answer to Nanotrasen's light fighter craft, this fighter is designed to maintain aerial supremacy."
-	icon = 'nsv13/icons/overmap/syndicate/syn_viper.dmi'
-	req_one_access = ACCESS_SYNDICATE
-	faction = "syndicate"
-	start_emagged = TRUE
-
-/obj/structure/overmap/fighter/interceptor/syndicate
-	name = "X-047 Manticore"
-	desc = "An X-047 Manticore two-seated space interceptor craft. Designed personally for NT ace on the Rapier base, outfitted by top-tier components. Manticore has been upgraded with reinforced struts and internal electromagnetic launcher for long-ranged engagement. This one was produced by stolen and copied blueprints for Syndicate usage."
+/obj/structure/overmap/fighter/interceptor/strike
+	name = "X-047S Manticore"
+	desc = "An X-047 Manticore two-seated space interceptor craft. Designed personally for NT ace on the Rapier base, outfitted by top-tier components. Manticore has been upgraded with reinforced struts and enhanced engine for intense combat. This one belongs to strike modification, featured with electromagnetic launcher developed by Grunder Industries."
 	icon = 'nsv13/icons/overmap/syndicate/syn_wyvern.dmi'
-	req_one_access = ACCESS_SYNDICATE
-	faction = "syndicate"
-	start_emagged = TRUE
+	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 50, "bomb" = 50, "bio" = 100, "rad" = 90, "fire" = 90, "acid" = 80, "overmap_light" = 35, "overmap medium" = 40, "overmap_heavy" = 120)
+	sprite_size = 32
+	damage_states = FALSE //temp
+	max_integrity = 300 //There's a lot of HP!
+	forward_maxthrust = 10
+	backward_maxthrust = 10
+	side_maxthrust = 9.5
+	max_angular_acceleration = 210
+	speed_limit = 10
+	pixel_w = -16
+	pixel_z = -20
+	components = list(/obj/item/fighter_component/fuel_tank/tier3,
+						/obj/item/fighter_component/avionics,
+						/obj/item/fighter_component/apu/tier3,
+						/obj/item/fighter_component/armour_plating/tier3,
+						/obj/item/fighter_component/targeting_sensor,
+						/obj/item/fighter_component/engine/tier2,
+						/obj/item/fighter_component/countermeasure_dispenser,
+						/obj/item/fighter_component/secondary/ordnance_launcher/railgun/grunder,
+						/obj/item/fighter_component/oxygenator/tier3,
+						/obj/item/fighter_component/canopy/tier3,
+						/obj/item/fighter_component/docking_computer,
+						/obj/item/fighter_component/battery/tier3,
+						/obj/item/fighter_component/primary/cannon)
 
-/obj/structure/overmap/fighter/interceptor
-	req_one_access = ACCESS_SYNDICATE
+/obj/structure/overmap/fighter/interceptor/strike
+	req_one_access = ACCESS_COMBAT_PILOT
 	icon = 'nsv13/icons/overmap/syndicate/syn_wyvern.dmi'
 	icon_state = "fighter"
 	components = list(/obj/item/fighter_component/fuel_tank/tier3,
@@ -475,12 +487,117 @@ Been a mess since 2018, we'll fix it someday (probably)
 						/obj/item/fighter_component/targeting_sensor,
 						/obj/item/fighter_component/engine/tier2,
 						/obj/item/fighter_component/countermeasure_dispenser,
-						/obj/item/fighter_component/secondary/ordnance_launcher/eml,
+						/obj/item/fighter_component/secondary/ordnance_launcher/railgun/grunder,
 						/obj/item/fighter_component/oxygenator/tier3,
 						/obj/item/fighter_component/canopy/tier3,
 						/obj/item/fighter_component/docking_computer,
 						/obj/item/fighter_component/battery/tier3,
-						/obj/item/fighter_component/primary/cannon/heavy)
+						/obj/item/fighter_component/primary/cannon)
+
+/obj/structure/overmap/fighter/interceptor/hawkins
+	name = "X-047 Manticore"
+	desc = "An X-047 Manticore two-seated space interceptor craft. Designed personally for NT ace on the Rapier base, outfitted by top-tier components. Manticore has been upgraded with reinforced airframe and enhanced engine for intense combat. As you look closer, you can see the name Tina Ridgewell engraved on it's hull."
+	components = list(/obj/item/fighter_component/fuel_tank/tier3,
+						/obj/item/fighter_component/avionics,
+						/obj/item/fighter_component/apu/tier3,
+						/obj/item/fighter_component/armour_plating/tier3,
+						/obj/item/fighter_component/targeting_sensor,
+						/obj/item/fighter_component/engine/tier2,
+						/obj/item/fighter_component/countermeasure_dispenser,
+						/obj/item/fighter_component/secondary/ordnance_launcher/tier2,
+						/obj/item/fighter_component/oxygenator/tier3,
+						/obj/item/fighter_component/canopy/tier3,
+						/obj/item/fighter_component/docking_computer,
+						/obj/item/fighter_component/battery/tier3,
+						/obj/item/fighter_component/primary/cannon)
+
+/obj/structure/overmap/fighter/interceptor/hawkins
+	req_one_access = ACCESS_COMBAT_PILOT
+	icon = 'nsv13/icons/overmap/syndicate/syn_wyvern.dmi'
+	icon_state = "fighter"
+	components = list(/obj/item/fighter_component/fuel_tank/tier3,
+						/obj/item/fighter_component/avionics,
+						/obj/item/fighter_component/apu/tier3,
+						/obj/item/fighter_component/armour_plating/tier3,
+						/obj/item/fighter_component/targeting_sensor,
+						/obj/item/fighter_component/engine/tier2,
+						/obj/item/fighter_component/countermeasure_dispenser,
+						/obj/item/fighter_component/secondary/ordnance_launcher/tier2,
+						/obj/item/fighter_component/oxygenator/tier3,
+						/obj/item/fighter_component/canopy/tier3,
+						/obj/item/fighter_component/docking_computer,
+						/obj/item/fighter_component/battery/tier3,
+						/obj/item/fighter_component/primary/cannon)
+
+/obj/structure/overmap/fighter/interceptor/hawkins/strike
+	name = "X-047S Manticore"
+	desc = "An X-047 Manticore two-seated space interceptor craft. Designed personally by NanoTrasen ace pilot Damien Hawkins on the Rapier base with usage of stolen Syndicate data, outfitted by top-tier components. Manticore has been upgraded with reinforced airframe and enhanced engine for intense combat. This one belongs to strike modification, featured with electromagnetic launcher developed by Grunder Industries. As you look closer, you can see the name Tina Ridgewell engraved on it's hull."
+	components = list(/obj/item/fighter_component/fuel_tank/tier3,
+						/obj/item/fighter_component/avionics,
+						/obj/item/fighter_component/apu/tier3,
+						/obj/item/fighter_component/armour_plating/tier3,
+						/obj/item/fighter_component/targeting_sensor,
+						/obj/item/fighter_component/engine/tier2,
+						/obj/item/fighter_component/countermeasure_dispenser,
+						/obj/item/fighter_component/secondary/ordnance_launcher/railgun/grunder,
+						/obj/item/fighter_component/oxygenator/tier3,
+						/obj/item/fighter_component/canopy/tier3,
+						/obj/item/fighter_component/docking_computer,
+						/obj/item/fighter_component/battery/tier3,
+						/obj/item/fighter_component/primary/cannon)
+
+/obj/structure/overmap/fighter/interceptor/hawkins/strike
+	req_one_access = ACCESS_COMBAT_PILOT
+	icon = 'nsv13/icons/overmap/syndicate/syn_wyvern.dmi'
+	icon_state = "fighter"
+	components = list(/obj/item/fighter_component/fuel_tank/tier3,
+						/obj/item/fighter_component/avionics,
+						/obj/item/fighter_component/apu/tier3,
+						/obj/item/fighter_component/armour_plating/tier3,
+						/obj/item/fighter_component/targeting_sensor,
+						/obj/item/fighter_component/engine/tier2,
+						/obj/item/fighter_component/countermeasure_dispenser,
+						/obj/item/fighter_component/secondary/ordnance_launcher/railgun/grunder,
+						/obj/item/fighter_component/oxygenator/tier3,
+						/obj/item/fighter_component/canopy/tier3,
+						/obj/item/fighter_component/docking_computer,
+						/obj/item/fighter_component/battery/tier3,
+						/obj/item/fighter_component/primary/cannon)
+
+//Syndie counterparts.
+/obj/structure/overmap/fighter/light/syndicate //PVP MODE
+	name = "YaK-609 Dagger"
+	desc = "The Syndicate's answer to Nanotrasen's light fighter craft, this fighter is designed to maintain aerial supremacy."
+	icon = 'nsv13/icons/overmap/syndicate/syn_viper.dmi'
+	req_one_access = ACCESS_SYNDICATE
+	faction = "syndicate"
+	start_emagged = TRUE
+
+/obj/structure/overmap/fighter/interceptor/wyvern
+	name = "S-046 Wyvern"
+	desc = "An S-046 Wyvern space interceptor craft. Designed personally for Syndicate ace by the callsign Pixy on the Rapier base, outfitted by top-tier components. Manticore has been upgraded with reinforced struts and internal electromagnetic launcher for long-ranged engagement."
+	icon = 'nsv13/icons/overmap/syndicate/syn_wyvern.dmi'
+	req_one_access = ACCESS_SYNDICATE
+	faction = "syndicate"
+	start_emagged = TRUE
+
+/obj/structure/overmap/fighter/interceptor/wyvern
+	req_one_access = ACCESS_SYNDICATE
+	icon = 'nsv13/icons/overmap/syndicate/syn_wyvern.dmi'
+	icon_state = "fighter"
+	components = list(/obj/item/fighter_component/fuel_tank/tier3,
+						/obj/item/fighter_component/avionics,
+						/obj/item/fighter_component/apu/tier3,
+						/obj/item/fighter_component/armour_plating/tier2,
+						/obj/item/fighter_component/targeting_sensor,
+						/obj/item/fighter_component/engine/tier2,
+						/obj/item/fighter_component/countermeasure_dispenser,
+						/obj/item/fighter_component/secondary/ordnance_launcher/tier2,
+						/obj/item/fighter_component/oxygenator/tier3,
+						/obj/item/fighter_component/canopy/tier3,
+						/obj/item/fighter_component/docking_computer,
+						/obj/item/fighter_component/battery/tier3,
+						/obj/item/fighter_component/primary/cannon)
 
 /obj/structure/overmap/fighter/Initialize(mapload, list/build_components=components)
 	. = ..()
@@ -547,9 +664,6 @@ Been a mess since 2018, we'll fix it someday (probably)
 		to_chat(user, "<span class='warning'>Access denied.</span>")
 
 /obj/structure/overmap/fighter/proc/enter(mob/user)
-	var/obj/structure/overmap/OM = user.get_overmap()
-	if(OM)
-		LAZYREMOVE(OM.mobs_in_ship, user)
 	user.forceMove(src)
 	mobs_in_ship += user
 	if((user.client?.prefs.toggles & SOUND_AMBIENCE) && user.can_hear_ambience() && engines_active()) //Disable ambient sounds to shut up the noises.
@@ -929,7 +1043,7 @@ due_to_damage: If the removal was caused voluntarily (FALSE), or if it was cause
 
 /obj/item/fighter_component/armour_plating/tier2
 	name = "Ultra Heavy Fighter Armour"
-	desc = "An extremely thick and heavy set of armour plates. Guaranteed to weigh you down, but it'll keep you flying through brasil itself."
+	desc = "An extremely thick and heavy set of armour plates. Guaranteed to weigh you down, but it'll keep you flying through Brasil itself."
 	tier = 2
 	weight = 2
 	obj_integrity = 450
@@ -942,6 +1056,14 @@ due_to_damage: If the removal was caused voluntarily (FALSE), or if it was cause
 	weight = 1.25
 	obj_integrity = 300
 	max_integrity = 300
+
+/obj/item/fighter_component/armour_plating/tier3/gunship
+	name = "Falcon Nanocarbon Armour Plates"
+	desc = "A lightweight set of thick ablative armour, featuring good protection for Su-524D Falcon gunships."
+	tier = 3
+	weight = 1.75
+	obj_integrity = 450
+	max_integrity = 450
 
 /obj/item/fighter_component/canopy
 	name = "Glass canopy"
@@ -960,6 +1082,14 @@ due_to_damage: If the removal was caused voluntarily (FALSE), or if it was cause
 	max_integrity = 200
 	tier = 1
 	weight = 0.5
+
+/obj/item/fighter_component/canopy/reinforced/gunship
+	name = "Falcon Reinforced Canopy"
+	desc = "A glass fighter canopy that's designed to maintain atmospheric pressure inside of a Su-524D Falcon gunship."
+	obj_integrity = 300
+	max_integrity = 300
+	tier = 1
+	weight = 0.75
 
 /obj/item/fighter_component/canopy/tier2
 	name = "Nanocarbon glass canopy"
@@ -1338,6 +1468,14 @@ due_to_damage: If the removal was caused voluntarily (FALSE), or if it was cause
 	var/max_charges = 3
 	var/charges = 3
 
+/obj/item/fighter_component/countermeasure_dispenser/gunship
+	name = "Falcon Gunship Countermeasure Dispenser"
+	desc = "A device which allows Su-524D Falcon gunship to deploy countermeasures."
+	icon = 'nsv13/icons/obj/fighter_components.dmi'
+	icon_state = "countermeasure"
+	max_charges = 5
+	charges = 5
+
 /obj/item/fighter_component/docking_computer
 	name = "Docking Computer"
 	desc = "A computer that allows fighters to easily dock to a ship"
@@ -1448,14 +1586,29 @@ Utility modules can be either one of these types, just ensure you set its slot t
 	ammo = list()
 
 /obj/item/fighter_component/primary/cannon
-	name = "20mm Vulcan Cannon"
+	name = "GAU-420 20mm Vulcan Cannon"
+	desc = "Light 20mm Gatling cannon for use as primary weaponry in fighters. Has a decent RPM, but hits not too hard by itself."
 	icon_state = "lightcannon"
 	accepted_ammo = /obj/item/ammo_box/magazine/nsv/light_cannon
 	burst_size = 2
 	fire_delay = 0.25 SECONDS
 
+/obj/item/fighter_component/primary/cannon/gunship
+	name = "23mm GSh-523 Cannon"
+	desc = "Powerful 23mm cannon, being utilized aboard Su-524D Falcon gunships. Mother Russia approves."
+	slot = HARDPOINT_SLOT_UTILITY_PRIMARY
+	overmap_select_sound = 'nsv13/sound/effects/ship/pdc_start.ogg'
+	overmap_firing_sounds = list('nsv13/sound/effects/fighters/BRRTTTTTT.ogg')
+	weight = 1
+	accepted_ammo = /obj/item/ammo_box/magazine/nsv/light_cannon
+	overmap_select_sound = 'nsv13/sound/effects/ship/pdc_start.ogg'
+	overmap_firing_sounds = list('nsv13/sound/effects/fighters/BRRTTTTTT.ogg')
+	burst_size = 3
+	fire_delay = 0.3 SECONDS
+
 /obj/item/fighter_component/primary/cannon/heavy
-	name = "30mm BRRRRTT Cannon"
+	name = "GAU-730 30mm BRRRRTT Cannon"
+	desc = "Your gun goes pew-pew? My gun goes BRRRT!"
 	icon_state = "heavycannon"
 	accepted_ammo = /obj/item/ammo_box/magazine/nsv/heavy_cannon
 	weight = 2 //Sloooow down there.
@@ -1510,63 +1663,94 @@ Utility modules can be either one of these types, just ensure you set its slot t
 
 //Todo: make fighters use these.
 /obj/item/fighter_component/secondary/ordnance_launcher
-	name = "Fighter Missile Rack"
+	name = "Raptor Guided Missile Rack"
 	desc = "A huge fighter missile rack capable of deploying missile based weaponry."
 	icon_state = "missilerack"
+	tier = 1
+	max_ammo = 4
 
 /obj/item/fighter_component/secondary/ordnance_launcher/tier2
-	name = "Upgraded Fighter Missile Rack"
+	name = "Morgen Upgraded Missile Rack"
+	desc = "Upgraded missile rack to deploy twice more missiles. That's what V2 has been made for."
 	tier = 2
-	max_ammo = 5
+	max_ammo = 6
+
+/obj/item/fighter_component/secondary/ordnance_launcher/tier2/gunship
+	name = "Hellfire External Missile Pylon"
+	desc = "A set of external pylons, purposed to carry eight missiles for use in Su-524D Falcon."
+	slot = HARDPOINT_SLOT_UTILITY_SECONDARY
+	tier = 2
+	max_ammo = 8
 
 /obj/item/fighter_component/secondary/ordnance_launcher/tier3
 	name = "A-11 'Spacehog' Cluster-Freedom Launcher"
+	desc = "When you really need to liberate that school from Space Talibans."
 	tier = 3
-	max_ammo = 15
+	max_ammo = 10
 	weight = 1
 	burst_size = 2
 	fire_delay = 0.10 SECONDS
 
 //Specialist item for the superiority fighter.
 /obj/item/fighter_component/secondary/ordnance_launcher/railgun
-	name = "Fighter Railgun"
-	desc = "A scaled down railgun designed for use in fighters."
+	name = "NanoTrasen XR-50 Fighter Railgun"
+	desc = "An experimental downgraded railgun designed for use in fighters. This is early prototype, based on stolen data of discontinued project of terminated pro-Syndicate company."
 	icon_state = "railgun"
-	weight = 1
+	weight = 1.2
+	accepted_ammo = /obj/item/ship_weapon/ammunition/railgun_ammo
+	overmap_firing_sounds = list('nsv13/sound/effects/ship/railgun_fire.ogg')
+	burst_size = 1
+	fire_delay = 0.35 SECONDS
+	max_ammo = 10
+	tier = 1
+
+/obj/item/fighter_component/secondary/ordnance_launcher/railgun/grunder
+	name = "Grunder Industries XM-40 Electromagnetic Launcher"
+	desc = "A compact bottom-mounted electromagnetic designed launcher for use in fighters. Packs quite a punch, weighting less than its Nanotrasen counterpart."
+	icon_state = "railgun"
+	weight = 0.75
 	accepted_ammo = /obj/item/ship_weapon/ammunition/railgun_ammo
 	overmap_firing_sounds = list('nsv13/sound/effects/ship/railgun_fire.ogg')
 	burst_size = 1
 	fire_delay = 0.2 SECONDS
 	max_ammo = 10
-	tier = 1
+	tier = 2
 
-/obj/item/fighter_component/secondary/ordnance_launcher/eml
-	name = "Grunder Electromagnetic Launcher"
-	desc = "A compact bottom-mounted electromagnetic launcher for use in fighters, utilizing standard AGC rounds to strike armored targets."
+/obj/item/fighter_component/secondary/ordnance_launcher/agc
+	name = "Grunder Industries XG-30 Automatic Gauss Cannon"
+	desc = "A compact bottom-mounted gauss cannon for use in fighters, utilizing standard AGC rounds to strike heavy fighters. Literally a plane-grade Glock 17. Sorry, no full-auto for you."
 	icon_state = "railgun"
 	weight = 1
 	accepted_ammo = /obj/item/ship_weapon/ammunition/gauss
 	overmap_firing_sounds = list('nsv13/sound/effects/ship/railgun_fire.ogg')
-	burst_size = 1
+	burst_size = 3
 	fire_delay = 0.2 SECONDS
-	max_ammo = 10
+	max_ammo = 17
 	tier = 1
 
 /obj/item/fighter_component/secondary/ordnance_launcher/torpedo
-	name = "Fighter Torpedo Launcher"
-	desc = "A heavy torpedo rack which allows fighters to fire torpedoes at targets"
+	name = "Gugo Fighter Bomb Launcher"
+	desc = "A heavy torpedo rack which allows fighters to fire torpedoes at targets."
 	icon_state = "torpedorack"
 	accepted_ammo = /obj/item/ship_weapon/ammunition/torpedo
 	max_ammo = 2
 	weight = 1
 
+/obj/item/fighter_component/secondary/ordnance_launcher/torpedo/single
+	name = "Jury-rigged Nuke Pylon"
+	desc = "Crude torpedo pylon made from scrap and attached to Sabre via duct tape to cosplay the Independency Day."
+	slot = HARDPOINT_SLOT_UTILITY_SECONDARY
+	accepted_ammo = obj/item/ship_weapon/ammunition/torpedo/nuke
+	max_ammo = 1
+
 /obj/item/fighter_component/secondary/ordnance_launcher/torpedo/tier2
-	name = "Enhanced Torpedo Launcher"
+	name = "Dora Enhanced Bomb Launcher"
+	desc = "Upgraded torpedo rack with double capacity featuring not two but four slots for ordnance to liberate all schools in Space Afghanistan."
 	tier = 2
 	max_ammo = 4
 
 /obj/item/fighter_component/secondary/ordnance_launcher/torpedo/tier3
-	name = "FR33-8IRD Torpedo Launcher"
+	name = "FR33-8IRD Democracy Launcher"
 	desc = "A massive torpedo launcher capable of deploying enough ordnance to level several small, oil-rich nations."
 	tier = 3
 	max_ammo = 10
