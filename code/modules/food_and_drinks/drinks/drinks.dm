@@ -524,6 +524,14 @@
 	icon_state = "sodawater"
 	list_reagents = list(/datum/reagent/consumable/sodawater = 50)
 
+/obj/item/reagent_containers/food/drinks/soda_cans/breensoda
+	name = "Dr. Dreen's Private Reserve"
+	desc = "Don't drink the water. They put something in it to make you forget."
+	icon_state = "sodawater"
+	list_reagents = list(/datum/reagent/consumable/sodawater = 40,
+	/datum/reagent/toxin/fentanyl = 5,
+	/datum/reagent/toxin/mindbreaker = 5)
+
 /obj/item/reagent_containers/food/drinks/soda_cans/lemon_lime
 	name = "orange soda"
 	desc = "You wanted ORANGE. It gave you Lemon Lime."
