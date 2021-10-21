@@ -42,7 +42,7 @@
 	name = "sawdust soup"
 	desc = "Nutritious, but tasteless meal, cheap and fitting as emergency food ration (nope, go boil your flying loli, weebs). You seem to be very poor on rations, if you are cooking this just like NSV Ebengrad, isn't it... Captain?"
 	icon_state = "frostpunksoup"
-	list_reagents = list(/datum/reagent/consumable/nutriment = 20, /datum/reagent/toxin/badfood = 5)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 20, /datum/reagent/toxin/bad_food = 5)
 	tastes = list("cold" = 2, "overcoming" = 2, "sawdust and poor references" = 1)
 	bitesize = 10
 	foodtype = GROSS
