@@ -237,6 +237,15 @@
 	result = /obj/item/reagent_containers/food/snacks/soup/beet/red
 	subcategory = CAT_SOUP
 
+/datum/crafting_recipe/food/frostpunksoup
+	name = "Sawdust soup"
+	reqs = list(
+	/datum/reagent/water = 10,
+	/datum/reagent/sawdust = 5
+	)
+	result= /obj/item/reagent_containers/food/snacks/frostpunksoup
+	subcategory = CAT_SOUP
+
 /datum/crafting_recipe/food/bisque
 	name = "Bisque"
 	reqs = list(
