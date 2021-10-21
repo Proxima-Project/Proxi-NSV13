@@ -44,7 +44,7 @@
 	icon_state = "frostpunksoup"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 20, /datum/reagent/toxin/bad_food = 5)
 	tastes = list("cold" = 2, "overcoming" = 2, "sawdust and poor references" = 1)
-	bitesize = 10
+	bitesize = 4
 	foodtype = GROSS
 
 /obj/item/reagent_containers/food/snacks/soup/slime
