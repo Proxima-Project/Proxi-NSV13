@@ -1490,6 +1490,13 @@
 	can_colour_mobs = FALSE
 	random_unrestricted = FALSE
 
+/datum/reagent/sawdust
+	name = "Sawdust"
+	description = "Wooden sawdust."
+	taste_description = "cool reference"
+	color = "#846f35"
+	var/injectable = 0
+
 //////////////////////////////////Hydroponics stuff///////////////////////////////
 
 /datum/reagent/plantnutriment

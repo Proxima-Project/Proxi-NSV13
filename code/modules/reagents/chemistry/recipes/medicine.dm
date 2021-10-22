@@ -38,6 +38,14 @@
 	mix_message = "The mixture yields a fine black powder."
 	required_temp = 380
 
+/datum/chemical_reaction/charcoal
+	name = "Carbon"
+	id = /datum/reagent/medicine/charcoal
+	results = list(/datum/reagent/medicine/charcoal = 1)
+	required_reagents = list(/datum/reagent/sawdust = 1)
+	mix_message = "Sawdust smoulders, sintering into a black mass"
+	required_temp = 715
+
 /datum/chemical_reaction/silver_sulfadiazine
 	name = "Silver Sulfadiazine"
 	id = /datum/reagent/medicine/silver_sulfadiazine

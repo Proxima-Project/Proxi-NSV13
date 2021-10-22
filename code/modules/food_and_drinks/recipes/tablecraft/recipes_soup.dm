@@ -237,6 +237,26 @@
 	result = /obj/item/reagent_containers/food/snacks/soup/beet/red
 	subcategory = CAT_SOUP
 
+/datum/crafting_recipe/food/frostpunksoup
+	name = "Sawdust soup"
+	reqs = list(
+	/obj/item/reagent_containers/glass/bowl = 1,
+	/datum/reagent/water = 10,
+	/datum/reagent/sawdust = 5
+	)
+	result= /obj/item/reagent_containers/food/snacks/frostpunksoup
+	subcategory = CAT_SOUP
+
+/datum/crafting_recipe/food/frostpunksoup/alt
+	name = "Sawdust soup (alt)"
+	reqs = list(
+	/obj/item/reagent_containers/glass/bowl = 1,
+	/datum/reagent/water = 10,
+	/obj/item/stack/sheet/mineral/wood = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/frostpunksoup
+	subcategory = CAT_SOUP
+
 /datum/crafting_recipe/food/bisque
 	name = "Bisque"
 	reqs = list(

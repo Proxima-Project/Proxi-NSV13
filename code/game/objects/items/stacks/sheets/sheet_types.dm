@@ -262,7 +262,7 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	resistance_flags = FLAMMABLE
 	merge_type = /obj/item/stack/sheet/mineral/wood
 	novariants = TRUE
-	grind_results = list(/datum/reagent/carbon = 20)
+	grind_results = list(/datum/reagent/sawdust = 20)
 
 /obj/item/stack/sheet/mineral/wood/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.wood_recipes
