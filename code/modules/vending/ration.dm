@@ -1,8 +1,8 @@
 /obj/machinery/vending/ration
 	name = "Ration Dispensing Unit"
-	desc = "A vending machine which vends daily rations for every crewmember."
-	product_slogans = "Pick up that can."
-	product_ads = "Sometimes, I dream about cheese.;Oh, hello, Mr. Reeman.;"
+	desc = "A vending machine which vends daily rations for every crewmember. Has are enough food to keep a whole team of workers afloat during a whole shift of hard labour."
+	product_ads = "Welcome to the Station 17."
+	product_slogans = "Sometimes, I dream about cheese.;Oh, hello, Mr. Reeman.;"
 	icon_state = "sustenance"
 	light_color = LIGHT_COLOR_BLUE
 	products = list(/obj/item/reagent_containers/food/snacks/rationpack = 20,
