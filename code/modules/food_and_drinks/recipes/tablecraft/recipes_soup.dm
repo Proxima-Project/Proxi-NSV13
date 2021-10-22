@@ -248,7 +248,7 @@
 	subcategory = CAT_SOUP
 
 /datum/crafting_recipe/food/frostpunksoup/alt
-	name = "Sawdust soup (planks)"
+	name = "Sawdust soup (alt)"
 	reqs = list(
 	/obj/item/reagent_containers/glass/bowl = 1,
 	/datum/reagent/water = 10,
