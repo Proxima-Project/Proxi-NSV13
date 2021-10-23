@@ -32,6 +32,10 @@
 		#include "map_files\Galactica\Galactica1.dmm"
 		#include "map_files\Galactica\Galactica2.dmm"
 
+		//Ravenholm
+		#include "map_files\Ravenholm\ravenholm.dmm
+		#include "map_files\Ravenholm\ravenholm2.dmm
+
 		#ifdef CIBUILDING
 			#include "templates.dm"
 		#endif
