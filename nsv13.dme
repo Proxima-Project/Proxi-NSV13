@@ -3190,6 +3190,7 @@
 #include "code\modules\vending\assist.dm"
 #include "code\modules\vending\autodrobe.dm"
 #include "code\modules\vending\boozeomat.dm"
+#include "code\modules\vending\breensoda.dm"
 #include "code\modules\vending\cartridge.dm"
 #include "code\modules\vending\cigarette.dm"
 #include "code\modules\vending\clothesmate.dm"

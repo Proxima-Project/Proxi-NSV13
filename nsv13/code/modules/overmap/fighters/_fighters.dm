@@ -1743,6 +1743,13 @@ Utility modules can be either one of these types, just ensure you set its slot t
 	accepted_ammo = /obj/item/ship_weapon/ammunition/torpedo/nuke
 	max_ammo = 1
 
+/obj/item/fighter_component/secondary/ordnance_launcher/torpedo/single
+	name = "Nanozon Cargo Delivery System"
+	desc = "Crude torpedo pylon made from scrap and attached to Sabre via duct tape to launch freight torpedoes and deliver miscellaneous cargo."
+	slot = HARDPOINT_SLOT_UTILITY_SECONDARY
+	accepted_ammo = /obj/item/ship_weapon/ammunition/torpedo/freight
+	max_ammo = 1
+
 /obj/item/fighter_component/secondary/ordnance_launcher/torpedo/tier2
 	name = "Dora Enhanced Bomb Launcher"
 	desc = "Upgraded torpedo rack with double capacity featuring not two but four slots for ordnance to liberate all schools in Space Afghanistan."

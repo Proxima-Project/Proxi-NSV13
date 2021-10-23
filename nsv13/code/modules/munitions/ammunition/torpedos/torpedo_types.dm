@@ -71,6 +71,13 @@
 	.=..()
 	. += "<span class='notice'> This is Antonio, the MAA's loyal companion.</span>"
 
+/obj/item/ship_weapon/ammunition/torpedo/nuke/giorno
+	name = "Giorno"
+
+/obj/item/ship_weapon/ammunition/torpedo/nuke/giorno/examine(mob/user)
+	.=..()
+	. += "<span class='notice'> This is Giorno, the MAA's loyal companion. GIO-GIO-GIO-GIORNO GIOVANNI!</span>"
+
 /obj/item/ship_weapon/ammunition/torpedo/nuke/fabio
 	name = "Fabio"
 
@@ -86,6 +93,11 @@
 	projectile_type = /obj/item/projectile/guided_munition/torpedo/post
 	var/max_stuff = 4 //Maximum amount of stuff that we can cram into it
 	var/breaking_out = FALSE
+
+/obj/item/ship_weapon/ammunition/torpedo/freight/boarding
+	name = "boarding torpedo"
+	desc = "Codex Astartes calls this maneuver- Oh, wait, wrong page."
+	max_stuff = 8
 
 /obj/item/ship_weapon/ammunition/torpedo/freight/crowbar_act(mob/living/user, obj/item/I)
 	if(!contents?.len)
@@ -146,6 +158,10 @@
 	icon_state = "torpedo_post"
 	homing_turn_speed = 0
 	damage = 0
+
+/obj/item/projectile/guided_munition/torpedo/post/boarding
+	name = "boarding torpedo"
+	desc = "Codex Astartes calls this maneuver- Oh, wait, wrong page."
 
 /obj/item/projectile/guided_munition/torpedo/post/windup() // As we can not lock onto a target, this just causes the torp to do a 180.
 	return
