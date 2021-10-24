@@ -22,6 +22,10 @@ map Atlas
 
 endmap
 
+map Ravenholm
+
+endmap
+
 map gladius
 	voteweight 1.5
 endmap

@@ -57,29 +57,29 @@ HUMANS_NEED_SURNAMES
 #FORCE_RANDOM_NAMES
 
 ## Unhash this to turn on automatic reopening of a player's job if they suicide at roundstart
-#REOPEN_ROUNDSTART_SUICIDE_ROLES
+REOPEN_ROUNDSTART_SUICIDE_ROLES
 
 ## Unhash to enable reopening of command level positions
-#REOPEN_ROUNDSTART_SUICIDE_ROLES_COMMAND_POSITIONS
+REOPEN_ROUNDSTART_SUICIDE_ROLES_COMMAND_POSITIONS
 
 ## Define the delay for roles to be reopened after the round starts in seconds.
 ## Has a minimum delay of 30 seconds, though it's suggested to keep over 1 min
 ## If undefined, the delay defaults to 4 minutes.
-#REOPEN_ROUNDSTART_SUICIDE_ROLES_DELAY 240
+REOPEN_ROUNDSTART_SUICIDE_ROLES_DELAY 240
 
 ## Unhash to enable a printed command report for reopened roles listing what roles were reopened.
-#REOPEN_ROUNDSTART_SUICIDE_ROLES_COMMAND_REPORT
+REOPEN_ROUNDSTART_SUICIDE_ROLES_COMMAND_REPORT
 
 
 ## ALERT LEVELS ###
-ALERT_GREEN Attention all hands. Set condition 3 throughout the ship. All non-essential personnel may leave their posts and pursue recreational activities.
-ALERT_BLUE_UPTO Attention all hands. Set condition 2 throughout the ship. Standard operational procedures are now in effect, all personnel must report to their posts.
-ALERT_BLUE_DOWNTO Attention all hands, stand down general quarters. Set condition 2 throughout the ship. All personnel may report back to their posts with the authorization of squad leaders.
-ALERT_RED_UPTO General quarters, general quarters. All hands man your battle stations!
-ALERT_RED_DOWNTO Attention all hands. Stand down defense condition zebra. Compartmental interlocks have now been lifted. General Quarters is still in effect.
-ALERT_ZEBRA_UPTO Attention all hands assume defense condition zebra. Compartmental interlocks have now been activated, prepare for incoming fire.
-ALERT_ZEBRA_DOWNTO ATTENTION: The automatic destruct sequence has been deactivated. Condition Zebra is now in effect.
-ALERT_DELTA DANGER: DANGER: The automatic destruct sequence is now activated. The ship will be scuttled imminently. All hands abandon ship.
+ALERT_GREEN Внимание, экипаж. На судне установлен зелёный код уровня угрозы. Гражданскому персоналу установлен режим свободного времени в случае отсутствия иных приказов.
+ALERT_BLUE_UPTO Внимание, экипаж. Введён режим повышенной боеготовности. Задействованы стандартные протоколы несения службы, всему персоналу прибыть на свои стандартные рабочие места.
+ALERT_BLUE_DOWNTO Внимание всему экипажу. Уровень боеготовности снижен. Персоналу разрешено вернуться на стандартные места с позволения командиров отрядов.
+ALERT_RED_UPTO Боевая тревога! Полная боеготовность! Всему экипажу занять боевые посты! Повторяю, экипажу - на боевые посты!
+ALERT_RED_DOWNTO Внимание, экипаж. Оборонительные протоколы отменены. Аварийные переборки отсеков открыты. Текущий приказ - сохранять режим полной боеготовности.
+ALERT_ZEBRA_UPTO Боевая тревога! Задействованы оборонительные протоколы! Произвести закрытие аварийных переборок и приготовиться к удару!
+ALERT_ZEBRA_DOWNTO ATTENTION: Автоматизированный протокол самоуничтожения деактивирован. Задействованы стандартные оборонительные протоколы судна.
+ALERT_DELTA DANGER: ВНИМАНИЕ: Задействованы автоматизированные протоколы самоуничтожения. Потеря корабля неизбежна. Всему экипажу немедленно покинуть борт.
 
 
 ## GAME MODES ###
@@ -466,26 +466,26 @@ SILICON_MAX_LAW_AMOUNT 12
 
 ## Roundstart Races
 ##-------------------------------------------------------------------------------------------
-## Uncommenting races will allow them to be choosen at roundstart while join_with_muntant_race is on. You'll need at least one.
+## Uncommenting races will allow them to be choosen at roundstart while join_with_mutant_race is on. You'll need at least one.
 
 ## You probably want humans on your space station, but technically speaking you can turn them off without any ill effect
 ROUNDSTART_RACES human
 
 ## Races that are strictly worse than humans that could probably be turned on without balance concerns
 ROUNDSTART_RACES lizard
-ROUNDSTART_RACES fly
+#ROUNDSTART_RACES fly
 ROUNDSTART_RACES moth
 ROUNDSTART_RACES plasmaman
 ROUNDSTART_RACES felinid
-ROUNDSTART_RACES squid
+#ROUNDSTART_RACES squid
 #ROUNDSTART_RACES shadow
 ROUNDSTART_RACES ipc
 
 ## Races that are better than humans in some ways, but worse in others
 ROUNDSTART_RACES ethereal
-ROUNDSTART_RACES apid
-ROUNDSTART_RACES synthetic
-ROUNDSTART_RACES oozeling
+#ROUNDSTART_RACES apid
+#ROUNDSTART_RACES synthetic
+#ROUNDSTART_RACES oozeling
 #ROUNDSTART_RACES jelly
 #ROUNDSTART_RACES iron_golem
 #ROUNDSTART_RACES adamantine_golem
@@ -605,7 +605,7 @@ ROUNDSTART_TRAITS
 #RANDOMIZE_SHIFT_TIME
 
 ## Sets shift time to server time at roundstart. Overridden by RANDOMIZE_SHIFT_TIME ##
-#SHIFT_TIME_REALTIME
+SHIFT_TIME_REALTIME
 
 ## Maximum fine for a citation
 MAXFINE 2000
