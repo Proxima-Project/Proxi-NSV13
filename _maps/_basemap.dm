@@ -12,6 +12,10 @@
 		#include "map_files\Atlas\Atlas.dmm"
 		#include "map_files\Atlas\Atlas2.dmm"
 
+		//Atlantis
+		#include "map_files\Atlas\Atlantis.dmm"
+		#include "map_files\Atlas\Atlantis2.dmm"
+
 		//Aetherwhisp
 		#include "map_files\Aetherwhisp\Aetherwhisp2.dmm"
 		#include "map_files\Aetherwhisp\Aetherwhisp1.dmm"
