@@ -63,6 +63,12 @@
 	results = list(/datum/reagent/toxin/chloralhydrate = 1)
 	required_reagents = list(/datum/reagent/consumable/ethanol = 1, /datum/reagent/chlorine = 3, /datum/reagent/water = 1)
 
+/datum/chemical_reaction/poloniumtea
+	name = "Polonium Tea"
+	id = /datum/reagent/toxin/poloniumtea
+	results = list(/datum/reagent/toxin/poloniumtea = 1)
+	required_reagents = list(/datum/reagent/toxin/polonium = 1, /datum/reagent/consumable/ethanol = 1, /datum/reagent/consumable/tea = 1)
+
 /datum/chemical_reaction/mutetoxin //i'll just fit this in here snugly between other unfun chemicals :v
 	name = "Mute Toxin"
 	id = /datum/reagent/toxin/mutetoxin

@@ -408,6 +408,16 @@
 	desc = "A poster advertising a movie about some masked men."
 	icon_state = "poster44"
 
+/obj/structure/sign/poster/contraband/gachi/billy
+	name = "Billy Herrington"
+	desc = "A poster, memorizing ancient Human actor by the name of Billy Herrington."
+	icon_state = "billy"
+
+/obj/structure/sign/poster/contraband/gachi/billy2
+	name = "Billy Herrington"
+	desc = "A poster, memorizing ancient Human actor by the name of Billy Herrington."
+	icon_state = "billy2"
+
 //annoyingly, poster45 is in another file.
 
 /obj/structure/sign/poster/contraband/free_key

@@ -375,8 +375,21 @@
 	toxpwr = 0
 	process_flags = ORGANIC | SYNTHETIC
 
+/datum/reagent/toxin/poloniumtea
+	name = "Tea"
+	description = "An extremely radioactive material in liquid form. Ingestion results in fatal irradiation. This one was mixed with tea and alcohol, resulting in quadruple effect amplification."
+	reagent_state = LIQUID
+	color = "#787878"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	toxpwr = 0
+	process_flags = ORGANIC | SYNTHETIC
+
 /datum/reagent/toxin/polonium/on_mob_life(mob/living/carbon/M)
 	M.radiation += 10
+	..()
+
+/datum/reagent/toxin/poloniumtea/on_mob_life(mob/living/carbon/M)
+	M.radiation += 40
 	..()
 
 /datum/reagent/toxin/histamine
