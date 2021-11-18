@@ -383,7 +383,6 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	toxpwr = 0
 	process_flags = ORGANIC | SYNTHETIC
-	nutriment_factor = 0
 	taste_description = "tart black tea"
 	glass_icon_state = "teaglass"
 	glass_name = "glass of tea"
