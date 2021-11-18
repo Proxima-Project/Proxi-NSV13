@@ -379,10 +379,15 @@
 	name = "Tea"
 	description = "An extremely radioactive material in liquid form. Ingestion results in fatal irradiation. This one was mixed with tea and alcohol, resulting in quadruple effect amplification."
 	reagent_state = LIQUID
-	color = "#787878"
+	color = "#101000"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	toxpwr = 0
 	process_flags = ORGANIC | SYNTHETIC
+	nutriment_factor = 0
+	taste_description = "tart black tea"
+	glass_icon_state = "teaglass"
+	glass_name = "glass of tea"
+	glass_desc = "Drinking it from here would not seem right."
 
 /datum/reagent/toxin/polonium/on_mob_life(mob/living/carbon/M)
 	M.radiation += 10
