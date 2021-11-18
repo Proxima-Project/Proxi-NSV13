@@ -20,6 +20,14 @@
 	required_reagents = list(/datum/reagent/oil = 1, /datum/reagent/ammonia = 1, /datum/reagent/oxygen = 1)
 	required_temp = 380
 
+/datum/chemical_reaction/phosgene
+	name = "Phosgene"
+	id = /datum/reagent/toxin/phosgene
+	results = list(/datum/reagent/toxin/phosgene = 4)
+	required_reagents = list(/datum/reagent/toxin/chlorine = 2, /datum/reagent/carbon = 1, /datum/reagent/oxygen = 1)
+	required_temp = 423
+	mix_message = "<span class='danger'>The mixture loses it's color, releasing a thin gust of fumes.</span>"
+
 /datum/chemical_reaction/itching_powder
 	name = "Itching Powder"
 	id = /datum/reagent/toxin/itching_powder
@@ -68,6 +76,8 @@
 	id = /datum/reagent/toxin/poloniumtea
 	results = list(/datum/reagent/toxin/poloniumtea = 1)
 	required_reagents = list(/datum/reagent/toxin/polonium = 1, /datum/reagent/consumable/ethanol = 1, /datum/reagent/consumable/tea = 1)
+	required_temp = 348
+	mix_message = "<span class='danger'>Tea slowly boils, dissolving in hot water as you mix it.</span>"
 
 /datum/chemical_reaction/mutetoxin //i'll just fit this in here snugly between other unfun chemicals :v
 	name = "Mute Toxin"

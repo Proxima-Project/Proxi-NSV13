@@ -229,6 +229,13 @@
 	results = list(/datum/reagent/consumable/ethanol/threemileisland = 10)
 	required_reagents = list(/datum/reagent/consumable/ethanol/longislandicedtea = 10, /datum/reagent/uranium = 1)
 
+/datum/chemical_reaction/teaboil
+	name = "Boiled Tea"
+	id = /datum/reagent/consumable/tea
+	results = list(/datu/reagent/consumable/warmtea = 3
+	required_reagents = list(/datum/reagent/tea = 1, /datum/reagent/water = 2)
+	required_temperature = 348
+
 /datum/chemical_reaction/whiskeysoda
 	name = "Whiskey Soda"
 	id = /datum/reagent/consumable/ethanol/whiskeysoda

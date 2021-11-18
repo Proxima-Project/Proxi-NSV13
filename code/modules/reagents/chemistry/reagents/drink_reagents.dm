@@ -329,6 +329,27 @@
 	..()
 	. = 1
 
+/datum/reagent/consumable/warmtea
+	name = "Warm Tea"
+	description = "Warm and tasty black tea. It has antioxidants, it's good for you!"
+	color = "#101000" // rgb: 16, 16, 0
+	nutriment_factor = 0
+	taste_description = "warm and tart black tea"
+	glass_icon_state = "teaglass"
+	glass_name = "glass of warm tea"
+	glass_desc = "Drinking it from here would not seem right."
+
+/datum/reagent/consumable/warmtea/on_mob_life(mob/living/carbon/M)
+	M.dizziness = max(0,M.dizziness-2)
+	M.drowsyness = max(0,M.drowsyness-1)
+	M.jitteriness = max(0,M.jitteriness-3)
+	M.AdjustSleeping(-20, FALSE)
+	if(M.getToxLoss() && prob(20))
+		M.adjustToxLoss(-2.5, 0)
+	M.adjust_bodytemperature(20 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+	..()
+	. = 1
+
 /datum/reagent/consumable/lemonade
 	name = "Lemonade"
 	description = "Sweet, tangy lemonade. Good for the soul."
@@ -337,7 +358,6 @@
 	glass_icon_state = "lemonpitcher"
 	glass_name = "pitcher of lemonade"
 	glass_desc = "This drink leaves you feeling nostalgic for some reason."
-
 
 /datum/reagent/consumable/tea/arnold_palmer
 	name = "Arnold Palmer"

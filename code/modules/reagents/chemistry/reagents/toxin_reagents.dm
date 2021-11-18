@@ -84,6 +84,21 @@
 		return
 	..()
 
+/datum/reagent/phosgene
+	name = "Phosgene"
+	description = "Highly toxic organic compound, utilized as chemical weapon"
+	color = "#d0d0d0"
+	reagent_state = GAS
+	taste_description = "freshly cut grass"
+	taste_mult = 1.5
+	var/toxpwr = 5
+	var/silent_toxin = FALSE //won't produce a pain message when processed by liver/life() if there isn't another non-silent toxin present.
+
+/datum/reagent/phosgene/on_mob_life(mob/living/carbon/M)
+	if(toxpwr)
+		M.adjustToxLoss(toxpwr*REM+rand(10,40), 0)
+		. = TRUE
+
 /datum/reagent/toxin/lexorin
 	name = "Lexorin"
 	description = "A powerful poison used to stop respiration."
@@ -376,14 +391,14 @@
 	process_flags = ORGANIC | SYNTHETIC
 
 /datum/reagent/toxin/poloniumtea
-	name = "Tea"
+	name = "Warm Tea"
 	description = "An extremely radioactive material in liquid form. Ingestion results in fatal irradiation. This one was mixed with tea and alcohol, resulting in quadruple effect amplification."
 	reagent_state = LIQUID
 	color = "#101000"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	toxpwr = 0
 	process_flags = ORGANIC | SYNTHETIC
-	taste_description = "tart black tea"
+	taste_description = "warm and tart black tea"
 	glass_icon_state = "teaglass"
 	glass_name = "glass of tea"
 	glass_desc = "Drinking it from here would not seem right."
