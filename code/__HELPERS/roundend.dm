@@ -719,29 +719,29 @@
 
 /datum/controller/subsystem/ticker/proc/sendtodiscord(var/survivors, var/escapees, var/integrity)
     var/discordmsg = ""
-    discordmsg += "--------------Конец раунда--------------\n"
-    discordmsg += "Номер раунда: [GLOB.round_id]\n"
-    discordmsg += "Длительность: [DisplayTimeText(world.time - SSticker.round_start_time)]\n"
-    discordmsg += "Игроков: [GLOB.player_list.len]\n"
-    discordmsg += "Выживших: [survivors]\n"
-    discordmsg += "Эвакуирующихся: [escapees]\n"
-    discordmsg += "Целостность: [integrity]\n"
-    discordmsg += "Режим: [SSticker.mode.name]\n"
+    discordmsg += "--------------ROUND END--------------\n"
+    discordmsg += "Round Number: [GLOB.round_id]\n"
+    discordmsg += "Duration: [DisplayTimeText(world.time - SSticker.round_start_time)]\n"
+    discordmsg += "Players: [GLOB.player_list.len]\n"
+    discordmsg += "Survivors: [survivors]\n"
+    discordmsg += "Escapees: [escapees]\n"
+    discordmsg += "Integrity: [integrity]\n"
+    discordmsg += "Gamemode: [SSticker.mode.name]\n"
     if(istype(SSticker.mode, /datum/game_mode/dynamic))
         var/datum/game_mode/dynamic/mode = SSticker.mode
-        discordmsg += "Уровень угрозы: [mode.threat_level]\n"
-        discordmsg += "Оставшаяся угроза: [mode.mid_round_budget]\n"
-        discordmsg += "Выполненные условия:\n"
+        discordmsg += "Threat level: [mode.threat_level]\n"
+        discordmsg += "Threat left: [mode.mid_round_budget]\n"
+        discordmsg += "Executed rules:\n"
         for(var/datum/dynamic_ruleset/rule in mode.executed_rules)
             discordmsg += "[rule.ruletype] - [rule.name]: -[rule.cost + rule.scaled_times * rule.scaling_cost] threat\n"
-    discordsendmsg("roundend", discordmsg)
+    discordsendmsg("ooc", discordmsg)
     discordmsg = ""
     var/list/ded = SSblackbox.first_death
     if(ded)
-        discordmsg += "Первая смерть: [ded["name"]], [ded["role"]], at [ded["area"]]\n"
-        var/last_words = ded["last_words"] ? "Последними словами были: \"[ded["last_words"]]\"\n" : "Умолк навсегда.\n"
+        discordmsg += "First Death: [ded["name"]], [ded["role"]], at [ded["area"]]\n"
+        var/last_words = ded["last_words"] ? "Their last words were: \"[ded["last_words"]]\"\n" : "They had no last words.\n"
         discordmsg += "[last_words]\n"
     else
-        discordmsg += "Никто не умер!\n"
+        discordmsg += "Nobody died!\n"
     discordmsg += "--------------------------------------\n"
-    discordsendmsg("roundend", discordmsg)
+    discordsendmsg("ooc", discordmsg)
