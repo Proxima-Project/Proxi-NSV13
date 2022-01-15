@@ -2,4 +2,5 @@ ip-whitelist:
   - "127.0.0.1"
 
 ooc-webhook: "discord webhook url"
+roundend-webhook: "roundend channel webhook url"
 ahelp-webhook: "ahelp webhook url"
