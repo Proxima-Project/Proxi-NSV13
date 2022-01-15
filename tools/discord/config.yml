@@ -1,5 +1,6 @@
 ip-whitelist:
   - "127.0.0.1"
 
-ooc-webhook: "discord webhook url"
+ooc-webhook: "https://discord.com/api/webhooks/931906581644333057/TSBMsN57ytztAG2nJ_2mD29VCuVcn9xXLtWPWKocZXblfsnTFTJG_3pKxZhtbA_hDxR8"
+roundend-webhook: "https://discord.com/api/webhooks/839458156147900426/Ui7n-rsVHzIy90pRdM7p-p8Zk_nHwrhjtWG7GahPfnhGHK2BHzkfI3ukcAKfkKi3R7kV"
 ahelp-webhook: "ahelp webhook url"
