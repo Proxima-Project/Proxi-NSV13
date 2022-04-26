@@ -221,7 +221,7 @@ SUBSYSTEM_DEF(overmap_mode)
 /datum/controller/subsystem/overmap_mode/proc/announce_objectives()
 	announced_objectives = TRUE
 
- 	/*
+	/*
 	Replace with a SMEAC brief?
 	- Situation
 	- Mission

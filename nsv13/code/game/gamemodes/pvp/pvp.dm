@@ -38,7 +38,7 @@ GLOBAL_LIST_EMPTY(syndi_crew_leader_spawns)
 	var/leader_antag_datum_type = /datum/antagonist/nukeop/leader/syndi_crew
 	var/list/jobs = list()
 	var/overflow_role = CONQUEST_ROLE_GRUNT
-	var/time_limit = 2 HOURS + 30 MINUTES //How long do you want the mode to run for? This is capped to keep it from dragging on or OOMing
+	var/time_limit = 4 HOURS + 30 MINUTES //How long do you want the mode to run for? This is capped to keep it from dragging on or OOMing
 	var/list/maps = list(
 		list(path = "hammurabiPVP.json", pop = list(0, 30)),
 		list(path = "astraeusPVP.json", pop = list(31, 39)),
@@ -129,12 +129,12 @@ Method to spawn in the Syndi ship on a brand new Z-level with the "boardable" tr
 /datum/game_mode/pvp/post_setup()
 	assign_jobs()
 	SSstar_system.time_limit = world.time + time_limit //Hard timecap to prevent this dragging on or crashing.
-	SSovermap_mode.mode.objective_reminder_interval = 2 HOURS //No external pressure in this round...
+	SSovermap_mode.mode.objective_reminder_interval = 4 HOURS //No external pressure in this round...
 	//And now, we make it so that NT sends fleets instead of the Syndicate...
 	var/datum/faction/synd = SSstar_system.faction_by_id(FACTION_ID_SYNDICATE)
 	var/datum/faction/nt = SSstar_system.faction_by_id(FACTION_ID_NT)
 	nt.fleet_spawn_rate = synd.fleet_spawn_rate
-	synd.fleet_spawn_rate = 2 HOURS
+	synd.fleet_spawn_rate = 4 HOURS
 	SSshuttle.registerHostileEnvironment(src)//Evac is disallowed
 	return ..()
 
