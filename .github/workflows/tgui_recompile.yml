@@ -14,7 +14,7 @@ on:
 env:
   COMMIT_NAME: 'ss13-beebot'
   COMMIT_EMAIL: '56381746+ss13-beebot@users.noreply.github.com'
-  DEFAULT_BRANCH: 'master'
+  DEFAULT_BRANCH: 'development'
   TOKEN: '${{ secrets.CL_TOKEN }}'
 
 jobs:
