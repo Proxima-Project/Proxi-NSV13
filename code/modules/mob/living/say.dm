@@ -45,10 +45,13 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	"г" = RADIO_CHANNEL_SUPPLY,
 	"м" = RADIO_CHANNEL_SERVICE,
 //	"ю" = RADIO_CHANNEL_EXPLORATION, //NSV13 - stole the exploration channel
+	"ц" = RADIO_CHANNEL_MUNITIONS, //NSV13 - Munitions radio
+	"й" = RADIO_CHANNEL_ATC, //NSV13 - ATC radio
 
 	// Faction
 	"е" = RADIO_CHANNEL_SYNDICATE,
 	"н" = RADIO_CHANNEL_CENTCOM,
+	"я" = RADIO_CHANNEL_PIRATE, //NSV13 - pirate radio
 
 	// Misc
 	"щ" = RADIO_CHANNEL_AI_PRIVATE
