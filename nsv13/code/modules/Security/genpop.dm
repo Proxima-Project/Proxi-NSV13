@@ -5,6 +5,41 @@
 #define PRESET_MEDIUM 3 MINUTES
 #define PRESET_LONG 5 MINUTES
 
+
+// SHITCODE FIX START
+/datum/fleet/nanotrasen/earth
+	name = "\proper Earth Defense Force"
+	taunts = list("You're foolish to venture this deep into Solgov space! Main batteries stand ready.", "All hands, set condition 1 throughout the fleet, enemy vessel approaching.", "Defense force, stand ready!", "We shall protect our homeland!")
+	size = FLEET_DIFFICULTY_HARD
+	allow_difficulty_scaling = FALSE
+	audio_cues = list()
+	fleet_trait = FLEET_TRAIT_DEFENSE
+
+/datum/fleet/nanotrasen/earth/assemble(datum/star_system/SS, difficulty)
+	. = ..()
+	if(!scanning)
+		addtimer(CALLBACK(src, .proc/scan), scan_delay)
+		scanning = TRUE
+
+/datum/fleet/nanotrasen/earth/proc/scan()
+	scanning = FALSE
+	if(!current_system)
+		return FALSE
+	for(var/obj/structure/overmap/OM in current_system.system_contents)
+		OM.relay('nsv13/sound/effects/ship/solgov_scan.ogg')
+	sleep(5 SECONDS)
+	for(var/obj/structure/overmap/shield_scan_target in current_system.system_contents)
+		if(istype(shield_scan_target, /obj/structure/overmap/nanotrasen/solgov))
+			continue //We don't scan our own boys.
+		//Ruh roh.... (Persona non gratas do not need to be scanned again.)
+		if((shield_scan_target.faction != shield_scan_target.name) && shield_scan_target.shields && shield_scan_target.shields.active && length(shield_scan_target.occupying_levels))
+			shield_scan_target.hail("Scans have detected that you are in posession of prohibited technology. \n Your IFF signature has been marked as 'persona non grata'. \n In accordance with SGC-reg #10124, your ship and lives are now forfeit. Evacuate all civilian personnel immediately and surrender yourselves.", name)
+			shield_scan_target.relay_to_nearby('nsv13/sound/effects/ship/solgov_scan_alert.ogg', ignore_self=FALSE)
+			shield_scan_target.faction = shield_scan_target.name
+
+// SHITCODE FIX END
+// Do not ask why
+
 /obj/machinery/turnstile
 	name = "turnstile"
 	desc = "A mechanical door that permits one-way access to the brig."
