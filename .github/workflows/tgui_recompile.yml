@@ -5,7 +5,8 @@ on:
     types: [rebuild-tgui]
   push:
     branches:
-      - 'master'
+      - 'development'
+      - 'production'
     paths:
       - 'tgui/**.js'
       - 'tgui/**.scss'
