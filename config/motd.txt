@@ -1,9 +1,18 @@
 <!-- Most valid html will work in here, excluding images. -->
 
-<h1>This server is running a development (Non-Production) build of NSV13!</h1>
-<br><i>
-<br><b>Website: 	<a href="http://nsv.beestation13.com">Click Me!</a></b>
+<h1>Добро пожаловать на сервер русского сообщества сборки NSV 13!</h1>
+<h2>Предоставлен проектом Proxima</h2>
+<br><i>Cтоит отметить, что мы не являемся официальным ответвлением от NSV 13, а пока лишь заимствуем их наработки в виде сборки.</i>
+<br>
+<h3>Ссылки русского сообщества NSV13</h3>
+<br><b>Discord: 	<a href="http://discord.gg/5rxpPmyD7r">Click Me!</a></b>
+<br><b>Github:	<a href="https://github.com/Proxima-Project/Proxi-NSV13">Click Me!</a></b>
+<br>
+<h3>Ссылки английского сообщества NSV13</h3>
+<br><b>Сайт: 	<a href="http://nsv.beestation13.com">Click Me!</a></b>
+<br><b>Вики: 	<a href="http://nsv.beestation13.com/wiki">Click Me!</a></b>
+<br><b>Карты: 	<a href="https://nsv.beestation13.com/wiki/Maps">Click Me!</a></b>
 <br><b>Discord: 	<a href="http://nsv.beestation13.com/discord">Click Me!</a></b>
-<br><b>Wiki: 	<a href="http://nsv.beestation13.com/wiki">Click Me!</a></b>
-<br><b>Donate to Beestation:	<a href="https://www.patreon.com/user?u=10639001">Click Me!</a></b>
-</i> <!--Be kind, Close your tags.-->
+<!--<br><b>Покормить Beestation:	<a href="https://www.patreon.com/user?u=10639001">Click Me!</a></b>-->
+
+<!--Be kind, Close your tags.-->
