@@ -3757,6 +3757,7 @@
 #include "nsv13\code\modules\vehicles\_vehicle.dm"
 #include "nsv13\code\modules\vehicles\hardpoint.dm"
 #include "nsv13\code\modules\vehicles\presets.dm"
+#include "nsv13Proxima\code\modules\TGS\TGSChatCommands.dm"
 // END_INCLUDE
 
 

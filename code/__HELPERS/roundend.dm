@@ -228,7 +228,8 @@
 	log_game("The round has ended.")
 	SSstat.send_global_alert("Round Over", "The round has ended, the game will restart soon.")
 	if(LAZYLEN(GLOB.round_end_notifiees))
-		send2tgs("Notice", "[GLOB.round_end_notifiees.Join(", ")] the round has ended.")
+		//send2tgs("Notice", "[GLOB.round_end_notifiees.Join(", ")] the round has ended.")
+		send2chat("*Раунд закончился, ребятки. Всем по слапу!*\n[GLOB.round_end_notifiees.Join(", ")]", "bot-spam")	// Proxima
 
 	RollCredits()
 
@@ -248,7 +249,8 @@
 	//Set news report and mode result
 	mode.set_round_result()
 
-	send2tgs("Server", "Round just ended.")
+	//send2tgs("Server", "Round just ended.")
+	send2chat("**Раунд на [SSmapping.config.map_name] завершен.**", "launch-alert")	// Proxima
 
 	if(length(CONFIG_GET(keyed_list/cross_server)))
 		send_news_report()
