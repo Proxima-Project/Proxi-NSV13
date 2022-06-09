@@ -26,7 +26,7 @@
 		return
 	last_irc_check = rtod
 	var/server = CONFIG_GET(string/server)
-	return "[GLOB.round_id ? "**Раунд №** `[GLOB.round_id]`\n" : ""]Игроков: `[GLOB.clients.len]`\nКарта: __[SSmapping.config.map_name]__\nРежим: ||__[GLOB.master_mode]__||\nРаунд: __[SSticker.HasRoundStarted() ? (SSticker.IsRoundInProgress() ? "Активен" : "Заканчивается") : "Подготавливается"]__\n**Заходи к нам: <[server ? server : "byond://[world.internet_address]:[world.port]"]>**"
+	return "[GLOB.round_id ? "**Раунд №** `[GLOB.round_id]`\n" : ""]Игроков: `[GLOB.clients.len]`\nКарта: __[SSmapping.config.map_name]__\nРежим: ||__[GLOB.master_mode]__||\nРаунд: __[SSticker.HasRoundStarted() ? (SSticker.IsRoundInProgress() ? "Активен" : "Заканчивается") : "Подготавливается"]__\n**Заходи к нам: <byond://[server ? server : "[world.internet_address]:[world.port]"]>**"
 
 /datum/tgs_chat_command/ircmanifest
 	name = "manifest"
@@ -60,6 +60,7 @@
 				//if ("srv") depString = "Отдел обслуживания"
 				if ("Silicon") depString = "Синтетики"
 				if ("Civilian") depString = "Гражданские"
+				if ("Munitions") depString = "Орудиный отдел"
 				else depString = dept
 			msg += "__**[depString]**__"
 			for(var/list/person in dept_list)
