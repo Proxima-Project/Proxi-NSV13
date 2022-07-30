@@ -5,6 +5,19 @@
 #define PRESET_MEDIUM 3 MINUTES
 #define PRESET_LONG 5 MINUTES
 
+
+// SHITCODE FIX START
+/datum/fleet/nanotrasen/earth
+	name = "\proper Earth Defense Force"
+	taunts = list("You're foolish to venture this deep into Solgov space! Main batteries stand ready.", "All hands, set condition 1 throughout the fleet, enemy vessel approaching.", "Defense force, stand ready!", "We shall protect our homeland!")
+	size = FLEET_DIFFICULTY_HARD
+	allow_difficulty_scaling = FALSE
+	audio_cues = list()
+	fleet_trait = FLEET_TRAIT_DEFENSE
+
+// SHITCODE FIX END
+// Do not ask why
+
 /obj/machinery/turnstile
 	name = "turnstile"
 	desc = "A mechanical door that permits one-way access to the brig."
